@@ -96,6 +96,7 @@ RUN echo "source /opt/openenclave/share/openenclave/openenclaverc" >> ~/.bashrc
 
 # Set environment variables
 ENV OPAQUE_HOME="/mc2/opaque-sql"
+ENV OPAQUE_PORT="50052"
 ENV OPAQUE_DATA_DIR=${OPAQUE_HOME}/data/
 ENV PRIVATE_KEY_PATH=${OPAQUE_HOME}/src/test/keys/mc2_test_key.pem
 ENV MODE=SIMULATE

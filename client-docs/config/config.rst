@@ -22,6 +22,8 @@ We'll need to perform some configuration for the user in the ``user`` section of
 
 - ``root_certificate`` : path to the Certificate Authority's certificate. |platform| Client uses the CA's certificate to generate a certificate for you. The |platform| compute service should also be aware of the CA certificate.
 
+- ``port`` : port Opaque SQL listens to on client. Optional parameter with default set to ``50052``.
+
 Launch
 ------
 Configuration for launching Azure resources. Parameters are:
@@ -152,6 +154,9 @@ All together, the configuration file will look something like the following.
         # Needed if you want to generate a certificate signed by CA
         root_certificate: ${MC2_CLIENT_HOME}/demo/keys/root.crt
         root_private_key: ${MC2_CLIENT_HOME}/demo/keys/root.pem
+
+        #User-defined port
+        port: 5002
 
     # Configuration for launching cloud resources
     launch:

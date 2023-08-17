@@ -24,6 +24,10 @@ user:
     root_certificate: ${MC2_CLIENT_HOME}/playground/keys/root.crt
     root_private_key: ${MC2_CLIENT_HOME}/playground/keys/root.pem
 
+    #User-defined port
+    port: 5002
+
+
 # Configuration for launching cloud resources
 launch:
     # The absolute path to your Azure configuraton

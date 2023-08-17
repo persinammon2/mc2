@@ -22,9 +22,9 @@ def run(script):
 
     # Job requires a TMS
     if _CONF["use_azure"]:
-        head_address = get_head_ip() + ":50052"
+        head_address = get_head_ip() + ":" + _CONF["port"]
     else:
-        head_address = _CONF["head"]["ip"] + ":50052"
+        head_address = _CONF["head"]["ip"] + ":" + _CONF["port"]
 
     try:
         with grpc.insecure_channel(head_address) as channel:

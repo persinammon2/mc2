@@ -566,6 +566,14 @@ def set_config(general_config=None):
         _CONF["head"] = manual_head_node
         _CONF["workers"] = manual_worker_nodes
 
+    # User configured port
+    if config["user"]["port"]:
+        _CONF["port"] = config["user"]["port"]
+    elif os.environ.get('OPAQUE_PORT'): 
+        _CONF["port"] = os.environ['OPAQUE_PORT']
+    else:
+        _CONF["port"] = "50052"
+
     return general_config
 
 
